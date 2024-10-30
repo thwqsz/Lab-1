@@ -46,48 +46,48 @@ red = '\x1b[48;5;196m'
 yellow = '\x1b[48;5;220m'
 green = '\x1b[48;5;82m'
 stop = '\x1b[0m'
-len = 20
+length = 20
+
+
 def draw_line(color, ln):
     line = ' '*20
     print(color, line, stop, end='')
 
+
 def flag_maker():
     for i in range(6):
         if i < 3:
-            draw_line(green, len)
-            draw_line(yellow, len)
-            draw_line(yellow, len)
+            draw_line(green, length)
+            draw_line(yellow, length)
+            draw_line(yellow, length)
             print()
         else:
-            draw_line(green, len)
-            draw_line(red, len)
-            draw_line(red, len)
+            draw_line(green, length)
+            draw_line(red, length)
+            draw_line(red, length)
             print()
+
 flag_maker()
-
-
 
 
 # 2. График функции y = x + 1
 
 white = '\x1b[48;5;15m'
 stop = '\x1b[0m'
-print()
-print()
-print()
-print('#2 график')
+print('\n\n\n#2 график')
+
 def draw_pix(start):
     print((start*3) + (white),' ', stop)
 
+
 height = 10
 width = 10
+
 
 def graph(h, w):
     for i in range(w, 0, -1):
         draw_pix(' '*i)
 graph(height, width)
-
-
 
 
 # 3 задание чарт
@@ -115,7 +115,6 @@ white = '\x1b[48;5;15m'
 stop = '\033[0m'
 
 
-
 # 4 задание фигурa
 
 white = '\x1b[48;5;15m'
@@ -127,6 +126,7 @@ def draw_pix(st1, en1, st2, en2):
     ln2 = ' '*(st2-1 - en1) + white + ' '*(en2-st2 + 1) + stop
     print(ln1, end='')
     print(ln2)
+
 
 def fig(size):
     width_of_place = size*4 + 1
